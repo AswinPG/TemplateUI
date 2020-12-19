@@ -4,13 +4,35 @@ A set of templated controls.
 
 <img src="images/templateui-home.gif" Width="300" />
 
+Supported platforms:
+* Android
+* iOS
+* macOS
+* UWP
+  
 _What is a templated control?_
 
 It is a control defined by a template. Every control has a **ControlTemplate** property and can modify the structure that defines the control.
+  
+## Usage
+
+**Step 1**: Add a reference to TemplateUI. 
+
+**NOTE:** Currently TemplateUI is not yet available in NuGet. _But... why?_. There are a couple more controls and some fixes almost ready. After merge and polish details, TemplateUI will be in NuGet.
+
+**Step 2**: Initialize TemplateUI in your shared library:
+
+`TemplateUI.Init();`
+
+**Step 3**: Enjoy coding!.
 
 ## Overview
 
-The controls available are:
+Let's see the possibilities of TemplateUI.
+
+#### Controls
+
+The **controls** available are:
 
 ### AvatarView
 
@@ -54,6 +76,12 @@ Several series graphs.
 
 <img src="images/templateui-datavisualization.gif" Width="300" />
 
+### Divider
+
+Displays a separator between views.
+
+<img src="images/templateui-divider.png" Width="300" />
+
 ### GridSplitter
 
 Represents the control that redistributes space between columns or rows of a Grid control.
@@ -96,6 +124,12 @@ Is a horizontal bar that can be manipulated by the user to select a double value
 
 <img src="images/templateui-slider.gif" Width="300" />
 
+### SnackBar
+
+Provide brief messages about app processes at the bottom of the screen.
+
+<img src="images/templateui-snackbar.gif" Width="300" />
+
 ### Tag
 
 Is a tagging control.
@@ -113,6 +147,36 @@ A View control that provides a toggled value.
 Enables a hierarchical list with expanding and collapsing nodes that contain nested items.
 
 <img src="images/templateui-treeview.gif" Width="300" />
+
+#### Layouts
+
+But ... isn't this a templated controls library? You are right. But to create certain controls, there are layouts that would help to achieve the desired result. For example, in the list of upcoming controls we have a Clock. To position the elements that make up the Clock, a CircularLayout makes things very simple.
+
+These Layouts, in addition to adding more possibilities to the library, help to create more templated controls.
+
+The **layouts** available are:
+
+### CircularLayout
+
+The CircularLayout is a simple Layout derivative that lays out its children in a circular arrangement. 
+It has some useful properties to allow some customization like the Orientation (Clockwise or Counterclockwise).
+
+<img src="images/templateui-circularlayout.png" Width="300" />
+
+### DockLayout
+
+The DockLayout makes it easy to dock content in all four directions (top, bottom, left and right). 
+This makes it a great choice in many situations, where you want to divide the screen into specific areas, 
+especially because by default, the last element inside the DockLayout, unless this feature is specifically disabled, 
+will automatically fill the rest of the space (center).
+
+<img src="images/templateui-docklayout.png" Width="300" />
+
+### HexLayout
+
+A Layout that arranges the elements in a honeycomb pattern.
+
+<img src="images/templateui-hexlayout.png" Width="300" />
 
 ## Contribute
 
@@ -148,14 +212,14 @@ Use GitHub [Issues](https://github.com/jsuarezruiz/TemplateUI/issues) for bug re
 ## What's next
 
 The next controls will be:
+* Clock
 * TabView
 
 In addition, there are ideas for a wide variety of controls like:
-* Clock
 * Calendar
 * ColorPicker
 * DataGrid
-* Divider
+* Horizontal Calendar
 * Loading
 * Pagination
 * StepBar
